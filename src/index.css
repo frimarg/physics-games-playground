@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F7F0E6;
+  min-height: 100vh;
+}
+
+@layer components {
+  /* Buttons */
+  .btn {
+    @apply px-4 py-2 rounded-lg font-body transition-all duration-200;
+    @apply hover:scale-[1.02] hover:shadow-md;
+    @apply active:scale-[0.98];
+    @apply focus:outline-none focus:ring-2 focus:ring-navy/30;
+  }
+
+  .btn-primary {
+    @apply btn bg-navy text-cream;
+    @apply hover:bg-navy/90;
+  }
+
+  .btn-ghost {
+    @apply btn bg-transparent text-navy;
+    @apply hover:bg-navy/5;
+  }
+
+  /* Cards/Panels */
+  .panel {
+    @apply rounded-xl border border-border bg-white/50 backdrop-blur-sm;
+    @apply transition-all duration-200;
+  }
+
+  /* Custom slider styling */
+  input[type="range"] {
+    @apply w-full h-2 rounded-full appearance-none cursor-pointer;
+    background: linear-gradient(to right, #102544 0%, #102544 var(--value-percent, 50%), #D9D9D9 var(--value-percent, 50%), #D9D9D9 100%);
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    @apply appearance-none w-5 h-5 rounded-full bg-navy shadow-md;
+    @apply transition-transform duration-150;
+  }
+
+  input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+  }
+
+  input[type="range"]::-webkit-slider-thumb:active {
+    transform: scale(0.95);
+  }
+
+  input[type="range"]::-moz-range-thumb {
+    @apply w-5 h-5 rounded-full bg-navy shadow-md border-0;
+  }
+}
