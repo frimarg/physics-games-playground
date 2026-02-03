@@ -1,7 +1,6 @@
-import { Gauge, ArrowUp, ChevronDown, Columns, MoveHorizontal, Activity, Zap, Atom, ChevronRight } from 'lucide-react'
-import { GameConfig, PhysicsType, ChaosHazards } from '../types'
+import { Gauge, ArrowUp, ChevronDown, Columns, MoveHorizontal, Activity, Zap, Atom } from 'lucide-react'
+import { GameConfig } from '../types'
 import { GAME_CONFIG } from '../config/constants'
-import { useState } from 'react'
 
 interface ControlPanelProps {
   config: GameConfig

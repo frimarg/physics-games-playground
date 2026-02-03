@@ -270,6 +270,7 @@ export function updateGame(state: GameState): GameState {
         progress: 0,
         phase: 'pulling',
         hasTriggeredThisGame: true,
+        waitingToResume: false,
       },
     }
   }

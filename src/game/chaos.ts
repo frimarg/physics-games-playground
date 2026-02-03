@@ -13,9 +13,7 @@
 import {
   ChaosState,
   ChaosHazards,
-  ElectricPillar,
   GammaRay,
-  GravityFlip,
   Vortex,
   Particle,
   Bird,
@@ -87,17 +85,6 @@ function spawnGammaRay(): GammaRay {
     warningTime: 240, // 4 seconds warning (was 3)
     activeTime: 30, // 0.5 second lethal (was 1)
     state: 'warning',
-    progress: 0,
-  }
-}
-
-function spawnGravityFlip(x: number): GravityFlip {
-  return {
-    id: generateId(),
-    x,
-    width: 200,
-    isActive: false,
-    duration: 180, // 3 seconds of flipped gravity
     progress: 0,
   }
 }
